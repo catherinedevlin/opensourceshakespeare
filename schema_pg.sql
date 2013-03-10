@@ -56,10 +56,12 @@ COPY chapter FROM '/tmp/opensourceshakespeare/Chapters.txt'
   WITH (FORMAT csv,
         QUOTE '~');
 
+UPDATE chapter SET description = '' WHERE description LIKE '---%';
+UPDATE chapter SET description = REPLACE(description, '&#8217;','''');
+
 DROP TABLE IF EXISTS paragraph;
 CREATE TABLE paragraph
-  ( workID         VARCHAR(32) NOT NULL REFERENCES work (workID),
-    paragraphID    INTEGER PRIMARY KEY NOT NULL,
+  ( workID         VARCHAR(32) NOT NULL REFERENCES work (workID), paragraphID    INTEGER PRIMARY KEY NOT NULL,
     paragraphNum   INTEGER NOT NULL,
     charID         VARCHAR(32) NOT NULL REFERENCES character (charID),
     plainText      TEXT NOT NULL,
@@ -73,6 +75,19 @@ CREATE TABLE paragraph
   );
 
 COPY paragraph FROM '/tmp/opensourceshakespeare/Paragraphs.txt'
+  WITH (FORMAT csv,
+        QUOTE '~');
+
+DROP TABLE IF EXISTS wordform;
+CREATE TABLE wordform
+  ( wordFormID     INTEGER PRIMARY KEY,
+    plainText      VARCHAR(64) NOT NULL,
+    phoneticText   VARCHAR(64) NOT NULL,
+    stemText       VARCHAR(64) NOT NULL,
+    occurences     INTEGER NOT NULL
+  );
+
+COPY wordform FROM '/tmp/opensourceshakespeare/WordForms.txt'
   WITH (FORMAT csv,
         QUOTE '~');
 
