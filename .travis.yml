@@ -1,0 +1,14 @@
+language: python
+python:
+  - "2.7"
+services:
+  - postgres
+before_install:
+  - psql -c 'create database shakes;' -U postgres
+  - psql -U postgres -f shakespeare.sql shakes
+install:
+  - pip install htsql-pgsql
+  - pip install requests
+after_install:
+  - htsql-ctl serve -E tweak.meta pgsql://:@/shakes &
+script nosetests
