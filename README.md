@@ -8,6 +8,12 @@ More likely, you just want the data, so create your database and run shakespeare
   createdb shakespeare
   psql shakespeare < shakespeare.sql
 
+To skip even fetching the repository:
+
+    createdb shakespeare
+    curl https://raw.githubusercontent.com/catherinedevlin/opensourceshakespeare/master/shakespeare.sql | psql shakespeare
+
+
 Compare to https://github.com/edent/Open-Source-Shakespeare, a MySQL port of (I believe) the same data.
 
 - Catherine Devlin (catherine.devlin@gmail.com)
