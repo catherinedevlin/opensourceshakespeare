@@ -2,11 +2,12 @@ The Open Source Shakespeare site (http://www.opensourceshakespeare.org/) is a co
 
 This makes a much more interesting data set for sample or demo use than some boring imaginary online retailer.  In this dataset, people die!
 
-If you wish to convert the data yourself (and possibly tinker with the process), run ./get_raw.sh, then schema_pg.sql.
+If you wish to convert the data yourself (and possibly tinker with the process), run `./get_raw.sh`, then `schema_pg.sql`.
 
 More likely, you just want the data, so create your database and run shakespeare.sql, like so:
-  createdb shakespeare
-  psql shakespeare < shakespeare.sql
+
+    createdb shakespeare
+    psql shakespeare < shakespeare.sql
 
 To skip even fetching the repository:
 
