@@ -1,0 +1,14 @@
+{
+  "name": "opensourceshakespeare",
+  "private": true,
+  "scripts": {
+    "db:reset": "if [ \"$DATABASE_URL\" = \"\" ]; then echo 'No DATABASE_URL envvar; aborting.'; exit 1; fi && psql -X1v ON_ERROR_STOP=1 -f shakespeare.sql \"$DATABASE_URL\"",
+    "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh && ./scripts/dump.sh'"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
+}
