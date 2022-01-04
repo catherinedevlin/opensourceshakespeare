@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+./scripts/fetch.sh
+./scripts/load.sh
+./scripts/dump.sh
+
+
