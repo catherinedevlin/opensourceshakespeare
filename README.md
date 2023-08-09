@@ -19,6 +19,7 @@ A SQLite client just connects directly to the included file `shakespeare.db`:
 
     sqlite3 shakespeare.db
 
+You can use [datasette-lite](https://github.com/catherinedevlin/opensourceshakespeare.git) to browse the SQLite port of the data directly in your browser: https://lite.datasette.io/?url=https://github.com/catherinedevlin/opensourceshakespeare/blob/master/shakespeare.db
 
 If you wish to convert the data yourself (and possibly tinker with the process), run `./import`. We run three phases: `fetch`, `load` and `dump`; if you prefer you can run those phases directly but be sure to do it from the root folder.
 
