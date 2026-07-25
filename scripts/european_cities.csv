@@ -1,0 +1,41 @@
+city,country,country_code,population,latitude,longitude,is_capital
+London,United Kingdom,GB,8945309,51.5074,-0.1278,true
+Berlin,Germany,DE,3769495,52.5200,13.4050,true
+Madrid,Spain,ES,3305408,40.4168,-3.7038,true
+Rome,Italy,IT,2873494,41.9028,12.4964,true
+Paris,France,FR,2165423,48.8566,2.3522,true
+Vienna,Austria,AT,1931830,48.2082,16.3738,true
+Hamburg,Germany,DE,1899160,53.5511,9.9937,false
+Bucharest,Romania,RO,1883425,44.4268,26.1025,true
+Warsaw,Poland,PL,1790658,52.2297,21.0122,true
+Budapest,Hungary,HU,1752286,47.4979,19.0402,true
+Barcelona,Spain,ES,1620343,41.3851,2.1734,false
+Munich,Germany,DE,1488202,48.1351,11.5820,false
+Milan,Italy,IT,1371498,45.4642,9.1900,false
+Prague,Czech Republic,CZ,1309000,50.0755,14.4378,true
+Sofia,Bulgaria,BG,1241396,42.6977,23.3219,true
+Brussels,Belgium,BE,1222637,50.8503,4.3517,true
+Birmingham,United Kingdom,GB,1141816,52.4862,-1.8904,false
+Cologne,Germany,DE,1084795,50.9375,6.9603,false
+Stockholm,Sweden,SE,975551,59.3293,18.0686,true
+Naples,Italy,IT,967069,40.8518,14.2681,false
+Amsterdam,Netherlands,NL,873338,52.3676,4.9041,true
+Marseille,France,FR,870731,43.2965,5.3698,false
+Turin,Italy,IT,870952,45.0703,7.6869,false
+Valencia,Spain,ES,800215,39.4699,-0.3763,false
+Krakow,Poland,PL,779966,50.0647,19.9450,false
+Zagreb,Croatia,HR,769944,45.8150,15.9819,true
+Frankfurt,Germany,DE,753056,50.1109,8.6821,false
+Oslo,Norway,NO,717710,59.9139,10.7522,true
+Seville,Spain,ES,688711,37.3891,-5.9845,false
+Zaragoza,Spain,ES,675301,41.6488,-0.8891,false
+Athens,Greece,GR,664046,37.9838,23.7275,true
+Copenhagen,Denmark,DK,660193,55.6761,12.5683,true
+Helsinki,Finland,FI,658864,60.1699,24.9384,true
+Riga,Latvia,LV,605802,56.9496,24.1052,true
+Dublin,Ireland,IE,592713,53.3498,-6.2603,true
+Vilnius,Lithuania,LT,588412,54.6872,25.2797,true
+Lisbon,Portugal,PT,547733,38.7223,-9.1393,true
+Bratislava,Slovakia,SK,475503,48.1486,17.1077,true
+Tallinn,Estonia,EE,437811,59.4370,24.7536,true
+Ljubljana,Slovenia,SI,295504,46.0569,14.5058,true
