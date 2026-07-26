@@ -12,6 +12,11 @@ You don't need to clone this repository, just create the database and import the
 createdb sampledb
 curl -L https://raw.githubusercontent.com/catherinedevlin/opensourceshakespeare/master/shakespeare.sql | psql sampledb
 ```
+
+Tables are created in the 'shakespeare' schema, so in `psql` you'll want to 
+
+    set search_path=shakespeare; 
+
 ## Using with [SQLite](https://sqlite.org/index.html)
 
 
@@ -29,6 +34,10 @@ More likely, you just want the data, so create your database and run shakespeare
 createdb sampledb
 psql sampledb < shakespeare.sql
 ```
+
+## Browsing live with [Datasette Lite](https://github.com/simonw/datasette-lite)
+
+[https://lite.datasette.io/?url=https://github.com/catherinedevlin/opensourceshakespeare/blob/master/shakespeare.db](https://lite.datasette.io/?url=https://github.com/catherinedevlin/opensourceshakespeare/blob/master/shakespeare.db)
 
 ## Thanks
 
