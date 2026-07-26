@@ -31,5 +31,5 @@ work""".split()
 
 for table in tables:
     df = pd.read_sql(f"SELECT * FROM {SCHEMA}.{table}", 'postgresql://postgres:longliveliz@127.0.0.1/shakes')
-    df.to_sql(table, 'sqlite:///shakespeare.db', if_exists='append')
+    df.to_sql(table, 'sqlite:///shakespeare.db', index=False, if_exists='append')
 

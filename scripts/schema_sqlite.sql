@@ -1,7 +1,6 @@
 
 CREATE TABLE work (
-	"index" BIGINT, 
-	id TEXT, 
+	id TEXT PRIMARY KEY, 
 	title TEXT, 
 	long_title TEXT, 
 	year BIGINT, 
@@ -13,8 +12,7 @@ CREATE TABLE work (
 );
 
 CREATE TABLE chapter (
-	"index" BIGINT, 
-	id BIGINT, 
+	id BIGINT PRIMARY KEY, 
 	work_id TEXT, 
 	section_number BIGINT, 
 	chapter_number BIGINT, 
@@ -24,8 +22,7 @@ CREATE TABLE chapter (
 CREATE INDEX ix_chapter_index ON chapter ("index");
 
 CREATE TABLE character (
-	"index" BIGINT, 
-	id TEXT, 
+	id TEXT PRIMARY KEY, 
 	name TEXT, 
 	abbrev TEXT, 
 	description TEXT, 
@@ -34,7 +31,6 @@ CREATE TABLE character (
 CREATE INDEX ix_character_index ON character ("index");
 
 CREATE TABLE character_work (
-	"index" BIGINT, 
 	character_id TEXT, 
 	work_id TEXT,
     FOREIGN KEY (character_id) REFERENCES character (id),
@@ -43,8 +39,7 @@ CREATE TABLE character_work (
 CREATE INDEX ix_character_work_index ON character_work ("index");
 
 CREATE TABLE paragraph (
-	"index" BIGINT, 
-	id BIGINT, 
+	id BIGINT PRIMARY KEY, 
 	work_id TEXT, 
 	paragraph_num BIGINT, 
 	character_id TEXT, 
@@ -62,8 +57,7 @@ CREATE TABLE paragraph (
 CREATE INDEX ix_paragraph_index ON paragraph ("index");
 
 CREATE TABLE wordform (
-	"index" BIGINT, 
-	id BIGINT, 
+	id BIGINT PRIMARY KEY, 
 	plain_text TEXT, 
 	phonetic_text TEXT, 
 	stem_text TEXT, 
